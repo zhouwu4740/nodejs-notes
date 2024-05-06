@@ -5,7 +5,7 @@ const path = require('path');
 const protobuf = require('protocol-buffers');   
 
 // 读取proto文件
-const schemas = protobuf(fs.readFileSync(path.join(__dirname, 'message.proto')));
+const schemas = protobuf(fs.readFileSync(path.join(__dirname, 'schema.proto')));
 
 const course = schemas.Course.encode({
     id: 1001,
